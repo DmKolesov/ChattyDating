@@ -51,6 +51,16 @@ enum StyleConstants {
                 UIColor(hexString: "#FA00FF"),
                 UIColor(hexString: "#889BFF")
             ]
+            static let profileGardient = [
+                UIColor(red: 0.737, green: 0.392, blue: 0.824, alpha: 1).cgColor,
+                UIColor(red: 0.929, green: 0.38, blue: 0.627, alpha: 1).cgColor,
+                UIColor(red: 0.937, green: 0.38, blue: 0.616, alpha: 1).cgColor
+            ]
+            static let contentProfile = [
+                UIColor(red: 0.545, green: 0, blue: 0.506, alpha: 1).cgColor,
+                UIColor(red: 0.827, green: 0, blue: 0.604, alpha: 1).cgColor,
+                UIColor(red: 0.976, green: 0.004, blue: 0.404, alpha: 1).cgColor
+            ]
         }
         enum TextColor {
             static let titleColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
