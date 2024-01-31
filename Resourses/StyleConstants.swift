@@ -1,9 +1,3 @@
-//
-//  StyleConstans.swift
-//  ChattyDating
-//
-//  Created by admin on 31.01.2024.
-//
 
 import UIKit
 
@@ -14,7 +8,7 @@ enum StyleConstants {
         static let regularTitle = UIFont(name: "GoodDogPlain", size: 40)
         static let premiumTitle = UIFont(name: "GoodDogPlain", size: 30)
         static let premiumType = UIFont(name: "GoodDogPlain", size: 15)
-
+        
         // Raleway
         static let placeholderTitle = UIFont(name: "Raleway-Regular", size: 13)
         static let buttonTitle = UIFont(name: "Raleway-Medium", size: 17)
@@ -43,10 +37,15 @@ enum StyleConstants {
                 UIColor(hexString: "#AA4DC8"),
                 UIColor(hexString: "#A6A6A6")
             ]
+            static let authLabelGradient = [
+                UIColor(hexString: "#915EE6").cgColor,
+                UIColor(hexString: "#AA4DC8").cgColor,
+                UIColor(hexString: "#A6A6A6").cgColor
+            ]
             static let basicColors = [
                 UIColor(red: 0.545, green: 0.38, blue: 0.922, alpha: 1).cgColor,
                 UIColor(red: 0.82, green: 0.196, blue: 0.592, alpha: 1).cgColor
-                ]
+            ]
             static let feedGradient = [
                 UIColor(hexString: "#FA00FF"),
                 UIColor(hexString: "#889BFF")
