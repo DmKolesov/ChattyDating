@@ -1,9 +1,3 @@
-//
-//  UICollectionView+Ext.swift
-//  ChattyDating
-//
-//  Created by admin on 31.01.2024.
-//
 
 import UIKit
 
