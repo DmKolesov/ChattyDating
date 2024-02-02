@@ -28,6 +28,7 @@ enum StyleConstants {
         enum GeneralColors {
             static let lightGray = UIColor(hexString: "##d3d3d3")
             static let authTextFieldBackgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.45)
+            static let registerTextFieldBorderColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.45).cgColor
             static let searchBarBackground = UIColor(red: 0, green: 0, blue: 0, alpha: 0.19)
             static let searchBarPlaceholderColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
         }

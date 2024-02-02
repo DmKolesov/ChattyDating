@@ -5,13 +5,10 @@ final class AuthViewController: UIViewController {
 
     private let gradientView = GradientView()
     private let titleLabel = UILabel()
-
     private let emailTextField = UITextField()
     private let passwordTextField = UITextField()
-
-    private var emailTextFieldView: CustomTextFieldView!
-    private var passwordTextFieldView: CustomTextFieldView!
-
+    private var emailTextFieldView: AuthCustomTextFieldView!
+    private var passwordTextFieldView: AuthCustomTextFieldView!
     private let forgotPasswordButton = UIButton()
     private let signInButton = UIButton()
     private let registerButton = GradientButton()
@@ -87,8 +84,8 @@ private extension AuthViewController {
         ])
     }
     func setupTextFields() {
-        emailTextFieldView = CustomTextFieldView(textField: emailTextField, placeholder: TextConstants.emailPhonePlaceholder)
-        passwordTextFieldView = CustomTextFieldView(textField: passwordTextField, placeholder: TextConstants.passwordPlaceHolder, isPassword: true)
+        emailTextFieldView = AuthCustomTextFieldView(textField: emailTextField, placeholder: TextConstants.emailPhonePlaceholder)
+        passwordTextFieldView = AuthCustomTextFieldView(textField: passwordTextField, placeholder: TextConstants.passwordPlaceHolder, isPassword: true)
 
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -148,10 +145,10 @@ private extension AuthViewController {
         view.addSubview(backGroundViewSignInButton)
 
         NSLayoutConstraint.activate([
-            backGroundViewSignInButton.topAnchor.constraint(equalTo: gradientView.bottomAnchor, constant: AuthModuleLayoutConstants.signInButtonTopOffset),
+            backGroundViewSignInButton.topAnchor.constraint(equalTo: gradientView.bottomAnchor, constant: AuthModuleLayoutConstants.buttonTopOffset),
             backGroundViewSignInButton.centerXAnchor.constraint(equalTo: gradientView.centerXAnchor),
-            backGroundViewSignInButton.widthAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.authButtonWidth),
-            backGroundViewSignInButton.heightAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.authButtonHeight),
+            backGroundViewSignInButton.widthAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.buttonWidth),
+            backGroundViewSignInButton.heightAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.buttonHeight),
 
             labelSignIn.centerXAnchor.constraint(equalTo: backGroundViewSignInButton.centerXAnchor),
             labelSignIn.centerYAnchor.constraint(equalTo: backGroundViewSignInButton.centerYAnchor),
@@ -187,11 +184,10 @@ private extension AuthViewController {
         view.addSubview(registerButton)
 
         NSLayoutConstraint.activate([
-
             registerButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: AuthModuleLayoutConstants.buttonOffset),
             registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            registerButton.widthAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.authButtonWidth),
-            registerButton.heightAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.authButtonHeight),
+            registerButton.widthAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.buttonWidth),
+            registerButton.heightAnchor.constraint(equalToConstant: AuthModuleLayoutConstants.buttonHeight),
 
             gradientLabel.topAnchor.constraint(equalTo: registerButton.topAnchor, constant: AuthModuleLayoutConstants.buttonOffset),
             gradientLabel.leadingAnchor.constraint(equalTo: registerButton.leadingAnchor, constant: AuthModuleLayoutConstants.buttonOffset),
