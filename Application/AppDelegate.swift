@@ -26,3 +26,16 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate {
+
+    static var window: UIWindow? {
+        guard
+            let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let sceneDelegate = windowScene.delegate as? SceneDelegate
+        else {
+            return nil
+        }
+
+        return sceneDelegate.window
+    }
+}

@@ -1,5 +1,6 @@
 
 import Foundation
+
 enum TextConstants {
     static let brandName = "Chatty\nDating"
     static let regularName = "Chatty Dating"
@@ -14,4 +15,10 @@ enum TextConstants {
     static let repeatPassword = "Подтвердите пароль"
     static let createProfileButton = "Создать"
     static let searchBarAttributedText = "Поиск"
+}
+
+enum AlertInfo {
+    static let ok = "OK"
+    static let cancel = "Cancel"
+    static let dismiss = "Dismiss"
 }

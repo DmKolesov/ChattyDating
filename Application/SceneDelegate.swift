@@ -11,7 +11,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = RegisterViewController()
+        let presenter = SplashPresenter()
+        window?.rootViewController = SplashScreenViewController(presenter: presenter)
+//        window?.rootViewController = RegisterViewController()
         window?.makeKeyAndVisible()
     }
 

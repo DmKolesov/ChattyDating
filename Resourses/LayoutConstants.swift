@@ -26,3 +26,14 @@ enum AuthModuleLayoutConstants {
     static let stackViewTopOffsetRatio: CGFloat = 0.06
     static let labelHeight: CGFloat = 20
 }
+
+
+enum Parent {
+    static let common = "common"
+    enum Auth {
+        static let unique = 1
+    }
+    enum SignIn {
+        
+    }
+}

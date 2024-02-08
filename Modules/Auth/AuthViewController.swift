@@ -1,7 +1,7 @@
 
 import UIKit
 
-final class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController, UINavigationControllerDelegate {
 
     private let gradientView = GradientView()
     private let titleLabel = UILabel()
@@ -12,13 +12,29 @@ final class AuthViewController: UIViewController {
     private let forgotPasswordButton = UIButton()
     private let signInButton = UIButton()
     private let registerButton = GradientButton()
-
+    
+    private let presenter: AuthPresenter
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+//        navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
         setupUI()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    init(presenter: AuthPresenter) {
+        self.presenter = presenter
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     @objc
     func didTapForgorPassword() {
         print("Forgot Password button tapped")
@@ -31,6 +47,10 @@ final class AuthViewController: UIViewController {
     @objc
     func didTapRegister() {
         print("Register button tapped")
+        presenter.openRegister(from: self)
+    }
+    deinit {
+        print("AuthViewController dealloc")
     }
 }
 

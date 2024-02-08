@@ -11,15 +11,47 @@ final class RegisterViewController: UIViewController {
     private let repeatPasswordTextfield = UITextField()
     private let createProfileButton = UIButton()
     
+    private let presenter: RegisterPresenter
+    
+    init(presenter: RegisterPresenter) {
+        self.presenter = presenter
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = false
         setupUI()
     }
     
     @objc func didTapCreateProfile() {
         print("didTapcreateProfile tapped!")
     }
+    deinit {
+        print("RegisterViewController dealloc")
+    }
 }
+
+extension RegisterViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == nameTextField {
+            print("Email Text: \(textField.text ?? "")")
+        } else if textField == phoneNumberMailTextField {
+            print("Password Text: \(textField.text ?? "")")
+        } else if textField == passwordTextField {
+            print("Password Text: \(textField.text ?? "")")
+        } else if textField == repeatPasswordTextfield {
+            print("Password Text: \(textField.text ?? "")")
+        }
+        return true
+    }
+}
+
 private extension RegisterViewController {
     func setupUI() {
         setupGradientView()
@@ -141,20 +173,5 @@ private extension RegisterViewController {
             createProfileButton.trailingAnchor.constraint(equalTo: backGroundViewCreateProfileButton.trailingAnchor),
             createProfileButton.bottomAnchor.constraint(equalTo: backGroundViewCreateProfileButton.bottomAnchor)
         ])
-    }
-}
-
-extension RegisterViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if textField == nameTextField {
-            print("Email Text: \(textField.text ?? "")")
-        } else if textField == phoneNumberMailTextField {
-            print("Password Text: \(textField.text ?? "")")
-        } else if textField == passwordTextField {
-            print("Password Text: \(textField.text ?? "")")
-        } else if textField == repeatPasswordTextfield {
-            print("Password Text: \(textField.text ?? "")")
-        }
-        return true
     }
 }
