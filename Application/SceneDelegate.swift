@@ -15,8 +15,14 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let presenter = MainPresenter()
 //        window?.rootViewController = MainViewController(presenter: presenter)
         
-        let presenter = ProfilePresenter()
-        window?.rootViewController = ProfileViewController(presenter: presenter)
+//        let presenter = ProfilePresenter()
+//        window?.rootViewController = ProfileViewController(presenter: presenter)
+        
+//        let presenter = MatchedPresenter()
+//        window?.rootViewController = MatchedViewController(presenter: presenter)
+        
+        let presenter = PremiumPresenter()
+        window?.rootViewController = PremiumViewController(presenter: presenter)
 
         window?.makeKeyAndVisible()
     }
