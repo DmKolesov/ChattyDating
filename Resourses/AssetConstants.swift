@@ -4,10 +4,11 @@ import UIKit
 enum AssetConstants {
     enum Image {
         enum Tabs {
-            static let main = UIImage(named: "main")
-            static let match = UIImage(named: "match")
-            static let premium = UIImage(named: "premium")
-            static let search = UIImage(named: "search")
+            static let main = UIImage(named: "main")?.withRenderingMode(.alwaysTemplate)
+            static let match = UIImage(named: "match")?.withRenderingMode(.alwaysTemplate)
+            static let premium = UIImage(named: "premium")?.withRenderingMode(.alwaysTemplate)
+            static let search = UIImage(named: "search")?.withRenderingMode(.alwaysTemplate)
+            static let profile = UIImage(named: "profile_avatar_ellipse")?.withRenderingMode(.alwaysTemplate)
         }
         enum Common {
             static let backgroundBtn = UIImage(named: "backgroundButtonImage")

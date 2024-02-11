@@ -55,7 +55,7 @@ final class InfoStackView: UIView {
     
 }
 
-private extension PersonInfoStackView {
+private extension InfoStackView {
     func setupUI() {
         personInfoStackView.addArrangedSubview(nameLabel)
         personInfoStackView.addArrangedSubview(ageLabel)

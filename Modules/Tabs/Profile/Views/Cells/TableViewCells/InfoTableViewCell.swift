@@ -1,8 +1,8 @@
 import UIKit
 
-final class UserPersonalInfoTableViewCell: UITableViewCell {
+final class InfoTableViewCell: UITableViewCell {
     @UsesAutoLayout
-    private var containerView: UserPersonalInfoView = UserPersonalInfoView()
+    private var containerView: InfoView = InfoView()
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -17,11 +17,11 @@ final class UserPersonalInfoTableViewCell: UITableViewCell {
     }
 }
 
-private extension UserPersonalInfoTableViewCell {
+private extension InfoTableViewCell {
     func setup() {
         backgroundColor = .clear
         selectionStyle = .none
-        addSubview(containerView)
+        contentView.addSubview(containerView)
 
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: topAnchor),
