@@ -1,4 +1,3 @@
-
 import UIKit
 
 enum AuthModuleLayoutConstants {
@@ -27,6 +26,22 @@ enum AuthModuleLayoutConstants {
     static let labelHeight: CGFloat = 20
 }
 
+enum LayoutConstants {
+    enum Common {
+        static let cornerRadius: CGFloat = 20
+    }
+}
+
+enum TabsLayoutConstants {
+    enum Main {
+        static let headerStackViewSpacing: CGFloat = 12
+        static let headerImageViewCornerRadius: CGFloat = 25
+        static let headerTextStackViewSpacing: CGFloat = 4
+        static let headerAvatarImageSize: CGFloat = 50
+        static let headerEdge: CGFloat = 10
+        static let headerMoreButtonSize: CGFloat = 30
+    }
+}
 
 enum Parent {
     static let common = "common"

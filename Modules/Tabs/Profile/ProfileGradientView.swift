@@ -1,9 +1,6 @@
-
-
 import UIKit
 
-final class GradientView: UIView {
-
+final class ProfileGradientView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
@@ -15,7 +12,7 @@ final class GradientView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        applyGradientMajor()
+        applyGradientForProfileView()
     }
 
     private func configureView() {
