@@ -86,6 +86,5 @@ final class TabbarController: UITabBarController {
         }
 
         tabsView.isHidden = visible.hidesBottomBarWhenPushed
-
     }
 }

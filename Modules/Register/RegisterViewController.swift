@@ -31,6 +31,7 @@ final class RegisterViewController: UIViewController {
     
     @objc func didTapCreateProfile() {
         print("didTapcreateProfile tapped!")
+        presenter.openTab(from: self)
     }
     deinit {
         print("RegisterViewController dealloc")

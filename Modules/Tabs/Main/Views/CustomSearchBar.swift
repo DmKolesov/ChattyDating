@@ -13,10 +13,12 @@ final class CustomSearchBar: UISearchBar {
 
     private func setupSearchBar() {
         self.placeholder = TextConstants.searchBarAttributedText
-        self.barTintColor = .blue
-        self.layer.cornerRadius = LayoutConstants.Common.cornerRadius
-        self.layer.masksToBounds = true
-        
+        self.backgroundColor = .clear
+
+        if let backgroundImage = UIImage(named: "back_main_stories") {
+            self.backgroundImage = backgroundImage.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
+        }
+
         if let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField {
             textFieldInsideSearchBar.textColor = StyleConstants.Colors.GeneralColors.searchBarPlaceholderColor
             textFieldInsideSearchBar.font = StyleConstants.Font.searchBarPlaceholder
@@ -30,3 +32,4 @@ final class CustomSearchBar: UISearchBar {
         }
     }
 }
+

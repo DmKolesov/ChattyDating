@@ -33,30 +33,28 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         
         case .userProfileInfo(let viewModel):
-            
             let cell: ControlTableViewCell = tableView
-                .dequeueReusableCell(withIdentifier: ControlTableViewCell.identifier, for: indexPath)
+                .dequeueReusableCell(
+                    withIdentifier: ControlTableViewCell.identifier,
+                    for: indexPath)
             return cell.bind(viewModel)
-            
             
         case .actualStories(let viewModel):
             let cell: ActualStoriesTableViewCell = tableView
-                .dequeueReusableCell(withIdentifier: ActualStoriesTableViewCell.identifier, for: indexPath)
-
-
-
-            print("Bound ActualStoriesSectionViewModel to ActualStoriesTableViewCell")
-
+                .dequeueReusableCell(
+                    withIdentifier: ActualStoriesTableViewCell.identifier,
+                    for: indexPath)
             return cell.bind(viewModel, collectionViewHandlers: viewModel.handler)
         case .userPersonalInfo(_):
-            
-            let cell: InfoTableViewCell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.identifier, for: indexPath)
+            let cell: InfoTableViewCell = tableView.dequeueReusableCell(
+                withIdentifier: InfoTableViewCell.identifier,
+                for: indexPath)
             return cell
-            
         case .posts(let viewModel):
-            
             let cell: UserPostsTableViewCell = tableView
-                .dequeueReusableCell(withIdentifier: UserPostsTableViewCell.identifier, for: indexPath)
+                .dequeueReusableCell(
+                    withIdentifier: UserPostsTableViewCell.identifier,
+                    for: indexPath)
             return cell.bind(viewModel)
         }
     }
