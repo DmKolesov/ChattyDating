@@ -54,6 +54,20 @@ extension UIView {
 
         layer.insertSublayer(gradientLayer, at: 0)
     }
+    
+    func applyGradientForChatView() {
+        let colors = StyleConstants.Colors.GradientColors.chatGradient
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.cornerRadius = layer.cornerRadius
+        gradientLayer.maskedCorners = layer.maskedCorners
+        gradientLayer.frame = bounds
+        gradientLayer.colors = colors
+        gradientLayer.locations = [0, 0.87, 1]
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
 }
 
 

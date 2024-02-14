@@ -13,32 +13,32 @@ final class PostHeaderView: UIView {
     
     @UsesAutoLayout
     private var avatarImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = TabsLayoutConstants.Main.headerImageViewCornerRadius
-        imageView.clipsToBounds = true
-        imageView.layer.borderWidth = 2.0
-        imageView.layer.borderColor = UIColor.white.cgColor
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.layer.cornerRadius = TabsLayoutConstants.Main.headerImageViewCornerRadius
+        view.clipsToBounds = true
+        view.layer.borderWidth = 2.0
+        view.layer.borderColor = UIColor.white.cgColor
         
-        return imageView
+        return view
     }()
     
     @UsesAutoLayout
     private var userNameLabel: UILabel = {
-        let label = UILabel()
-        label.font = StyleConstants.Font.titleDescription
-        label.textColor = StyleConstants.Colors.TextColor.titleDescriptionColor
+        let view = UILabel()
+        view.font = StyleConstants.Font.titleDescription
+        view.textColor = StyleConstants.Colors.TextColor.titleDescriptionColor
 
-        return label
+        return view
     }()
     
     @UsesAutoLayout
     private var lastOnlineLabel: UILabel = {
-        let label = UILabel()
-        label.font = StyleConstants.Font.titleDescriptionCell
-        label.textColor = StyleConstants.Colors.TextColor.titleDescriptionColor
+        let view = UILabel()
+        view.font = StyleConstants.Font.titleDescriptionCell
+        view.textColor = StyleConstants.Colors.TextColor.titleDescriptionColor
         
-        return label
+        return view
     }()
     
     @UsesAutoLayout
@@ -49,8 +49,7 @@ final class PostHeaderView: UIView {
             
             return button
         }()
-    
-    // add actionButton
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
@@ -62,7 +61,6 @@ final class PostHeaderView: UIView {
 
         setupUI()
     }
-    // add activity indicator
     
     func bind(_ item: MainViewModel) {
         avatarImage.image = UIImage(named: item.avatarImage)

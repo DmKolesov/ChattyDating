@@ -61,6 +61,11 @@ enum StyleConstants {
                 UIColor(red: 0.827, green: 0, blue: 0.604, alpha: 1).cgColor,
                 UIColor(red: 0.976, green: 0.004, blue: 0.404, alpha: 1).cgColor
             ]
+            static let chatGradient = [
+                UIColor(hexString: "#DC2E99"),
+                UIColor(hexString: "#DE62AF"),
+                UIColor(hexString: "#BA64CC")
+            ]
         }
         enum TextColor {
             static let titleColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)

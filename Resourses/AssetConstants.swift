@@ -17,6 +17,7 @@ enum AssetConstants {
             static let backgroundEllipse = UIImage(named: "back_ellipse")
             static let searchBarGlass = UIImage(named: "magnifyingGlass")
             static let backgroundCosmo = UIImage(named: "back_cosmo")
+            static let backgroundMessage = UIImage(named: "background_message")
         }
     }
    

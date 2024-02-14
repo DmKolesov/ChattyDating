@@ -1,6 +1,6 @@
 import UIKit
 
-final class GradientView: UIView {
+final class ChatGradientView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -13,7 +13,7 @@ final class GradientView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        applyGradientMajor()
+        applyGradientForContentProfileView()
     }
 
     private func configureView() {
