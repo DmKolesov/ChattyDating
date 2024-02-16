@@ -2,10 +2,10 @@ import UIKit
 
 protocol AuthRouter {
     func openRegister(from controller: UIViewController)
-    func openTabs()
+    func openTabs(from controller: UIViewController)
 }
 
-struct AuthRouterImpl: AuthRouter {
+class AuthRouterImpl: AuthRouter {
     func openRegister(from controller: UIViewController) {
         let presenter = RegisterPresenter()
         let register = RegisterViewController(presenter: presenter)
@@ -14,7 +14,9 @@ struct AuthRouterImpl: AuthRouter {
         
     }
     
-    func openTabs() {
-        //later
+    func openTabs(from controller: UIViewController) {
+        let tabbar = TabbarController()
+        let navi = NavigationController(rootViewController: tabbar)
+        AppDelegate.window?.rootViewController = navi
     }
 }

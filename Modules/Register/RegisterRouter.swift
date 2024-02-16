@@ -4,7 +4,7 @@ protocol RegisterRouter {
     func openTabs(from controller: UIViewController)
 }
 
-struct RegisterRouterImpl: RegisterRouter {
+class RegisterRouterImpl: RegisterRouter {
     func openTabs(from controller: UIViewController) {
         let tabbar = TabbarController()
         let navi = NavigationController(rootViewController: tabbar)

@@ -18,7 +18,6 @@ final class ContentProfileView: UIView {
     
     private func configureView() {
         alpha = 0.5
-//        alpha = 1
         layer.cornerRadius = 50
         layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         translatesAutoresizingMaskIntoConstraints = false

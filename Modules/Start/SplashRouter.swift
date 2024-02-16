@@ -6,7 +6,7 @@ protocol SplashRouter {
     func openTabs()
 }
 
-struct SplashRouterImpl: SplashRouter {
+class SplashRouterImpl: SplashRouter {
     func openAuth(from controller: UIViewController, setupFromOnboarding: Bool) {
         let options = AuthPresenter.Options(
             setupFromOnboarding: setupFromOnboarding)
