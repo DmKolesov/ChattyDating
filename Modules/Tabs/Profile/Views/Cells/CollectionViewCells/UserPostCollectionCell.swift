@@ -26,7 +26,7 @@ final class UserPostCollectionCell: UICollectionViewCell {
         
         postImageView.image = item.posts
         return self
-       }
+    }
 }
 
 private extension UserPostCollectionCell {

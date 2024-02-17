@@ -18,7 +18,7 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        presenter.display()
+        presenter.display(on: self)
     }
 }
 
@@ -78,7 +78,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         presenter.didSelectItem(at: indexPath)
-        print("Selected row in viewController at indexPath: \(indexPath)")
     }
 }
 
@@ -86,8 +85,6 @@ private extension ProfileViewController {
     func setup() {
         profileTableView.translatesAutoresizingMaskIntoConstraints = false
         profileTableView.separatorStyle = .none
-        
-    
         profileTableView.delegate = self
         profileTableView.dataSource = self
         profileTableView.backgroundView = backgroundGradientView

@@ -12,9 +12,9 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         
-        let presenter = SplashPresenter()
-        let splash = SplashScreenViewController(presenter: presenter)
-        window?.rootViewController = splash
+//        let presenter = SplashPresenter()
+//        let splash = SplashScreenViewController(presenter: presenter)
+//        window?.rootViewController = splash
         
 //        let presenter = MainPresenter()
 //        window?.rootViewController = MainViewController(presenter: presenter)
@@ -28,8 +28,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let presenter = PremiumPresenter()
 //        window?.rootViewController = PremiumViewController(presenter: presenter)
         
-//        let presenter = ProfilePresenter()
-//        window?.rootViewController = ProfileViewController(presenter: presenter)
+        let presenter = ProfilePresenter()
+        window?.rootViewController = ProfileViewController(presenter: presenter)
         
 //        window?.rootViewController = TabbarController()
         

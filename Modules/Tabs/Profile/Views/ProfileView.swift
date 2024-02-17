@@ -12,7 +12,8 @@ final class UserProfileView: UIView {
     private var matchButton = MatchActionButton()
     private var messageButton = MessageActionButton()
 
-    var handlers: ProfileDataSource.UserProfileViewHandlers?
+//    var handlers: ProfileDataSource.UserProfileViewHandlers?
+    var handlers: ProfilePresenter.Handlers?
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)

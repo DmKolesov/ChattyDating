@@ -50,9 +50,7 @@ private extension UserPostsTableViewCell {
         postsCollectionView.delegate = self
         postsCollectionView.dataSource = self
         postsCollectionView.backgroundColor = .clear
-        
         postsCollectionView.register(UserPostCollectionCell.self, forCellWithReuseIdentifier: UserPostCollectionCell.identifier)
-        
         contentView.addSubview(postsCollectionView)
         
         NSLayoutConstraint.activate([

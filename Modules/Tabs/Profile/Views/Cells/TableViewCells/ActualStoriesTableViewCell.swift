@@ -28,16 +28,12 @@ final class ActualStoriesTableViewCell: UITableViewCell {
         self.viewModel = item
         self.handlers = collectionViewHandlers
         actualStoriesCollectionView.reloadData()
-        print("Bound ActualStoriesSectionViewModel to ActualStoriesTableViewCell with \(item)")
-        isUserInteractionEnabled = true
-     
-     
         item.items.forEach { item in
             switch item {
             case .actual(let actualViewModel):
-                print("Bound ActualCellViewModel with \(actualViewModel) to ActualStoriesTableViewCell")
+                print("case .actual in ActualStoriesTableViewCell")
             case .addActual(let addActualViewModel):
-                print("Bound AddActualCellViewModel with \(addActualViewModel) to ActualStoriesTableViewCell")
+                print("case .addActual in ActualStoriesTableViewCell")
             }
         }
 
@@ -76,7 +72,6 @@ extension ActualStoriesTableViewCell: UICollectionViewDelegate, UICollectionView
 
         viewModel?.handler.selected(item)
         print("Selected item at indexPath: \(indexPath) in ActualStoriesTableViewCell")
-        print("Cell content: \(item)")
     }
 
 }
